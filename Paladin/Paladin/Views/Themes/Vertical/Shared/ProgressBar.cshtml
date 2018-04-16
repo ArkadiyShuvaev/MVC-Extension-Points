@@ -1,0 +1,39 @@
+﻿@model Paladin.Models.Progress
+@using Paladin.Infrastructure;
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.WorkflowActionLink("ApplicantInfo", "Applicant", "Personal", (int)WorkflowStatus.ApplicantInfo, 
+            Model.CurrentStage, (int)WorkflowStatus.Begin, Model.HighestStage)
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.WorkflowActionLink("AddressInfo", "Address", "Address", (int)WorkflowStatus.AddressInfo,
+        Model.CurrentStage, (int)WorkflowStatus.ApplicantInfo, Model.HighestStage)
+    </div>
+</div>
+    <div class="row">
+    <div class="col-md-12">
+        @Html.WorkflowActionLink("EmploymentInfo", "Employment", "Employment", (int)WorkflowStatus.EmploymentInfo,
+            Model.CurrentStage, (int)WorkflowStatus.AddressInfo, Model.HighestStage)
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.WorkflowActionLink("VehicleInfo", "Vehicle", "Vehicle", (int)WorkflowStatus.VehicleInfo,
+                Model.CurrentStage, (int)WorkflowStatus.EmploymentInfo, Model.HighestStage)
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.WorkflowActionLink("ProductInfo", "Products", "Products", (int)WorkflowStatus.Products,
+        Model.CurrentStage, (int)WorkflowStatus.VehicleInfo, Model.HighestStage)
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        @Html.WorkflowActionLink("Final", "Home", "Final", (int)WorkflowStatus.Final,
+        Model.CurrentStage, (int)WorkflowStatus.Products, Model.HighestStage)
+    </div>
+</div>

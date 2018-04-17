@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Paladin.Models;
 using System.Data.Entity;
@@ -36,6 +34,11 @@ namespace Paladin.Controllers
 
             return View(applicant);
         }
+
+	    public ActionResult GetUserAgent(string userAgent)
+	    {
+		    return Content(userAgent);
+		}
 
         [HttpPost]
         public ActionResult ApplicantInfo(ApplicantVM vm)

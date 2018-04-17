@@ -5,8 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
@@ -24,6 +22,7 @@ namespace Paladin
 		        ViewEngines.Engines.Insert(0, new ThemeViewEngine(activeTheme));
 	        }
 
+			ValueProviderFactories.Factories.Insert(0, new HttpValueProviderFactory());
 			ModelBinderProviders.BinderProviders.Insert(0, new XMLModelBinderProvider());
 
 	        AreaRegistration.RegisterAllAreas();

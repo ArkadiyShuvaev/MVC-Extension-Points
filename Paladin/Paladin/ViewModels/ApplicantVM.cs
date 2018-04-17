@@ -1,16 +1,14 @@
 ﻿using Paladin.Models;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using Paladin.Infrastructure;
 
 namespace Paladin.ViewModels
 {
-    public class ApplicantVM
+    public class ApplicantVM : LogData
     {
-        [Required]
+	    public string UserAgent { get; set; }
+	    [Required]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Required]

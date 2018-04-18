@@ -154,6 +154,7 @@
     <Compile Include="Infrastructure\BirthdateValidator.cs" />
     <Compile Include="Infrastructure\CsvResult.cs" />
     <Compile Include="Infrastructure\ExceptionLoggingFilter.cs" />
+    <Compile Include="Infrastructure\HttpAuthentication.cs" />
     <Compile Include="Infrastructure\HttpValueProvider.cs" />
     <Compile Include="Infrastructure\RazorWorkflowExtensions.cs" />
     <Compile Include="Infrastructure\ThemeViewEngine.cs" />

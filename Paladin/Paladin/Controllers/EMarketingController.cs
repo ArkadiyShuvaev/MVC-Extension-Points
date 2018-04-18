@@ -4,11 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Xml.Serialization;
+using Paladin.Infrastructure;
 using Paladin.Models;
 using WebGrease.Css.Ast.Selectors;
 
 namespace Paladin.Controllers
 {
+	[HttpAuthenticate("EAdmin", "Epassword123")] //RUFkbWluOkVwYXNzd29yZDEyMw==
 	public class EMarketingController : Controller
 	{
 		private readonly PaladinDbContext _context;

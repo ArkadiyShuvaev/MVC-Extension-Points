@@ -146,6 +146,7 @@
     <Compile Include="Controllers\EmploymentController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PromotionsController.cs" />
     <Compile Include="Controllers\ServiceController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Global.asax.cs">
@@ -156,6 +157,7 @@
     <Compile Include="Infrastructure\ExceptionLoggingFilter.cs" />
     <Compile Include="Infrastructure\HttpAuthentication.cs" />
     <Compile Include="Infrastructure\HttpValueProvider.cs" />
+    <Compile Include="Infrastructure\IsPaladinMobile.cs" />
     <Compile Include="Infrastructure\RazorWorkflowExtensions.cs" />
     <Compile Include="Infrastructure\ThemeViewEngine.cs" />
     <Compile Include="Infrastructure\WorkflowFilter.cs" />
@@ -275,6 +277,8 @@
     <Content Include="Views\Home\Clear.cshtml" />
     <Content Include="Views\Themes\Vertical\Applicant\ApplicantInfo.cshtml" />
     <Content Include="Views\Themes\Vertical\Shared\ProgressBar.cshtml" />
+    <Content Include="Views\Promotions\Promos.cshtml" />
+    <Content Include="Views\Promotions\GoPromo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

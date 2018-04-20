@@ -41,7 +41,7 @@ namespace Paladin.Infrastructure
 
 		private static string GetValue(object item, string propName)
 		{
-			return item.GetType().GetProperty(propName).GetValue(item, null).ToString() ?? "";
+			return Convert.ToString(item.GetType().GetProperty(propName)?.GetValue(item, null));
 		}
 	}
 }

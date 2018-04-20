@@ -144,6 +144,7 @@
     <Compile Include="Controllers\ApplicantController.cs" />
     <Compile Include="Controllers\EMarketingController.cs" />
     <Compile Include="Controllers\EmploymentController.cs" />
+    <Compile Include="Controllers\PaladinController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PromotionsController.cs" />

@@ -8,11 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
+using Paladin.Controllers;
 using Paladin.Infrastructure;
 
 namespace Paladin.Areas.Admin.Controllers
 {
-    public class DataExportController : Controller
+    public class DataExportController : PaladinController
     {
         private PaladinDbContext _context;
 
@@ -35,7 +36,7 @@ namespace Paladin.Areas.Admin.Controllers
                 mappedApplicants.Add(Mapper.Map<ApplicantVM>(app));
             }
 
-            return new CsvResult(mappedApplicants, "TestCsv.csv");
+            return Csv(mappedApplicants, "TestCsv.csv");
         }
 		
     }

@@ -1,17 +1,13 @@
 ﻿using AutoMapper;
 using Paladin.Models;
 using Paladin.ViewModels;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Web;
 using System.Web.Mvc;
-using System.Xml.Serialization;
 
 namespace Paladin.Controllers
 {
-    public class ServiceController : Controller
+    public class ServiceController : PaladinController
     {
         private readonly PaladinDbContext _context;
 
@@ -29,7 +25,7 @@ namespace Paladin.Controllers
                 vmApplicants.Add(Mapper.Map<ApplicantVM>(app));
             }
 
-            return new Infrastructure.XmlResult(vmApplicants);
+            return Xml(vmApplicants);
         }
 
     }

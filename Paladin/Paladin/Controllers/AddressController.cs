@@ -14,7 +14,7 @@ namespace Paladin.Controllers
 	[WorkflowFilter(
 		MinRequiredStage = (int)WorkflowStatus.ApplicantInfo,
 		CurrentStage = (int)WorkflowStatus.AddressInfo)]
-	public class AddressController : Controller
+	public class AddressController : PaladinController
     {
         private PaladinDbContext _context;
 
@@ -25,14 +25,8 @@ namespace Paladin.Controllers
         // GET: Address
         public ActionResult AddressInfo()
         {
-            if (Session["Tracker"] == null)
-            {
-                return RedirectToAction("ApplicantInfo", "Applicant");
-            }
-            var tracker = (Guid)Session["Tracker"];
-
             var addresses = new Addresses();
-            var applicant = _context.Applicants.FirstOrDefault(x => x.ApplicantTracker == tracker);
+            var applicant = _context.Applicants.FirstOrDefault(x => x.ApplicantTracker == Tracker);
             var existingMain = applicant.Addresses.FirstOrDefault(x => x.IsMailing == false);
             if (existingMain != null)
             {
